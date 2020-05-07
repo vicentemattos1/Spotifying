@@ -2,7 +2,7 @@ const Singer = require('../models/Singer');
 
 module.exports = {
     async store(request,response) {
-        const {name,estilo, musics} = request.body;
+        const {name,estilo,singer_image, musics} = request.body;
         
         let singer = await Singer.findOne({name});
 
@@ -11,6 +11,7 @@ module.exports = {
         
             singer = await Singer.create({
                 name,
+                singer_image,
                 estilo,
                 musics,
                 albums

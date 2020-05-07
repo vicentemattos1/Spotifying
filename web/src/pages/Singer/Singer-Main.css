@@ -1,0 +1,18 @@
+#singer-playlist-list{
+    height: 100%;
+    overflow: auto;
+}
+
+#singer-playlist-list ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: solid #aaa 0.5px
+
+}
+
+#singer-playlist-list ul li{
+    color:#FFF;
+}
+
+
+

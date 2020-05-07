@@ -37,7 +37,7 @@ module.exports = {
         });
         
 
-        return response.json( {singer} );
+        return response.json(singer);
 
     }
 
