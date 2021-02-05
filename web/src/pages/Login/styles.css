@@ -1,0 +1,107 @@
+#login-screen{
+    height: 100vh;
+    width: 100vw;
+}
+
+#login-screen .header{
+    align-items: center;
+    height: 13rem;
+    padding: 2rem 0;
+    border-bottom: solid 1px grey;
+    display: flex;
+    justify-content: center;
+}
+
+#login-screen .header svg {
+    height: 6rem;
+    width: 20rem;
+    text-align: center;
+}
+
+#login-screen .container-login {
+    max-width: 600px;
+    margin: 15rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-screen .container-login > a {
+    margin-top: 2rem;
+    align-self: flex-start;
+}
+
+#login-screen .container-login .row_submit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    border-bottom: solid 1px grey;
+}
+
+#login-screen .container-login .row_submit .checkbox-block{
+    display: flex;
+}
+
+#login-screen .container-login .row_submit .checkbox-block input{
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+#login-screen .container-login .row_submit button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--color-button-text);
+    background: #15883e;
+    border-radius: 40px;
+    width: 20rem;
+    height: 5rem;
+
+    transition: .2s;
+}
+
+#login-screen .container-login .row_submit button:hover{
+    background: var(--color-button-background);
+}
+
+
+#login-screen .container-login .signup_section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+#login-screen .container-login .signup_section strong{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#login-screen .container-login .signup_section a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--color-button-text);
+    background: var(--color-box-base);
+    border: solid 3px var(--color-text-base);
+    border-radius: 40px;
+    width: 100%;
+    height: 5rem;
+
+    transition: 0.2s;
+}
+
+#login-screen .container-login .signup_section a:hover{
+    background: #616467;
+    color: var(--color-box-base);
+}

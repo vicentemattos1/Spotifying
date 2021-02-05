@@ -1,0 +1,26 @@
+#page-layout{
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 90px;
+
+    grid-template-areas: 
+    "menu musics"
+    "player player"
+    ;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-layout aside{
+    background: black;
+    overflow: hidden;
+    grid-area: menu;
+}
+
+#page-layout footer {
+    background: black;
+    border-top: solid 2px rgb(141, 141, 141, 0.5);
+    grid-area: player;
+}

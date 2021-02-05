@@ -1,0 +1,119 @@
+.page-header{
+    width: 100vw;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+}
+
+.page-header .header-content{
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.page-header .header-content svg {
+    height: 4.5rem;
+    align-self: center;
+    fill: var(--color-text-title);
+}
+
+#page-landing main {
+    height: 100%;
+    width: 100%;
+}
+
+#page-landing main section{
+    background: url('https://www.scdn.co/i/home/lieVariants/bursts.svg') no-repeat;
+    background-color: rgb(10, 55, 200);
+    background-size: 165%;
+    background-position: 43% 0%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-landing main section .landing-text{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Archivo;
+}
+
+.landing-text h1 {
+    color: var(--color-text-green);
+    line-height: 16.6rem;
+    font-size: 13.6rem;
+    margin-bottom: 4rem;
+}
+
+.landing-text span{
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    color: var(--color-text-green);
+}
+.landing-text a {
+    padding: 1.6rem 4rem 1.6rem;
+    text-decoration: none;
+    color: var(--color-button-text);
+    background: var(--color-button-background);
+    border-radius: 40px;
+    width: 30rem;
+    height: 5rem;
+    align-self: center;
+    text-align: center;
+}
+
+@media(max-width:1300px){
+    #page-landing main section{
+        background: url('https://www.scdn.co/i/home/lieVariants/bursts-mobile.svg') no-repeat;
+        background-color: rgb(10, 55, 200);
+        background-size: 175%;
+        background-position: 46% 30%;
+    }
+}
+
+
+
+@media(max-width:1170px){
+    .page-header{
+        height: 5.4rem;
+    }
+    .page-header .header-content{
+        padding: 0 2rem;
+    }
+    
+    .page-header .header-content svg{
+        height: 2.7rem;
+    }
+}
+
+@media(max-width:700px){
+    #page-landing main section{
+        background: url('https://www.scdn.co/i/home/lieVariants/bursts-mobile.svg') no-repeat;
+        background-color: rgb(10, 55, 200);
+        background-size: 195%;
+        background-position: top 25% center;
+    }
+    
+    #page-landing main section .landing-text{
+        width: 100vw;
+        height: 24.8rem;
+        margin: 0 2rem;
+    }
+
+    .landing-text h1{
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    .landing-text span{
+        font-size: 1.6rem;
+    }
+}

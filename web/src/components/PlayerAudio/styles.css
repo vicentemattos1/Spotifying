@@ -1,0 +1,76 @@
+#now-playing-bar{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+#now-playing-bar .now-playing {
+    flex: 1;
+    background: red;
+}
+
+#now-playing-bar .now-playing .music-info{
+    display: flex;
+    height: 100%;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+#now-playing-bar .now-playing .music-info img {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 2rem;
+}
+
+#now-playing-bar .now-playing .music-info span{
+    overflow-x: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    text-decoration: none;
+    color: var(--color-title-in-primary);
+    max-width: 2rem;
+}
+
+#now-playing-bar .now-playing .music-info .music-info-box{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 20rem;
+
+    margin-right: 2rem;
+}
+
+#now-playing-bar .now-playing .music-info .music-info-box a{
+    overflow-x: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    text-decoration: none;
+    color: var(--color-title-in-primary);
+}
+
+#now-playing-bar .now-playing .music-info button {
+    background: transparent;
+    border: none;
+}
+
+#now-playing-bar .now-playing .music-info button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#now-playing-bar .now-playing .music-info button svg {
+    height:2.3rem;
+    width: 2.3rem;
+}
+
+#now-playing-bar .player-control {
+    flex: 2;
+    background: green;
+}
+
+
+#now-playing-bar .other-controls{
+    flex: 1;
+    background: yellow;
+}
