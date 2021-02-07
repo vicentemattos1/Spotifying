@@ -7,7 +7,6 @@
 
 #now-playing-bar .now-playing {
     flex: 1;
-    background: red;
 }
 
 #now-playing-bar .now-playing .music-info{
@@ -65,12 +64,91 @@
 }
 
 #now-playing-bar .player-control {
-    flex: 2;
-    background: green;
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
 }
 
+#now-playing-bar .player-control .main-controls{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+#now-playing-bar .player-control .player-control-buttons{
+    display: flex;
+    justify-content: space-between;
+
+    width: 30rem;
+    height: 50%;
+    margin: 1rem auto;
+}
+
+#now-playing-bar .player-control .player-control-buttons button {
+    border: none;
+    background: none;
+    color: var(--color-title-in-primary);
+}
+
+#now-playing-bar .player-control .player-control-buttons .main-control{
+    display: flex;
+    align-items: flex-start;
+}
+
+#now-playing-bar .player-control .player-control-buttons .secundary-control{
+    font-size: 1.5rem;
+}
+
+#now-playing-bar .player-control .player-control-buttons .main-control button{
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-skip{
+    height: 4rem;
+}
+
+#now-playing-bar .player-control .player-control-buttons .main-control button:first-child{
+    transform: rotate(180deg);
+}
+
+
+#now-playing-bar .player-control .progress-bar{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+}
+
+#now-playing-bar .player-control .progress-bar span{
+    color: var(--color-title-in-primary);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
 
 #now-playing-bar .other-controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     flex: 1;
-    background: yellow;
 }
+
+#now-playing-bar .other-controls .button-block{
+    margin-right: 4rem;
+    display: flex;
+}
+
+#now-playing-bar .other-controls .button-block svg{
+    color: var(--color-title-in-primary);
+    font-size: 2.5rem;
+    margin-right: 2rem;
+}
+

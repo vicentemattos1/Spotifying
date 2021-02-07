@@ -1,25 +1,68 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 import './styles.css'
+import PlayerControl from './PlayerControl';
+
+import Alok from '../../assets/images/music/Alok.jpg'
 
 function PlayerAudio() {
-
-
+        
+    const [isPlaying,setIsPlaying] = useState(false);
+    
     const [isFavorite, setIsFavorite] =useState(false)
+
+    const musics = [
+        {        
+            name: 'Waiting for the end',
+            artists: ['Linkin park'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+        {        
+            name: 'In the end',
+            artists: ['Linkin park'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+        {        
+            name: "Don't say good bye",
+            artists: ['Alok','Ilkay Sencan'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+        {        
+            name: 'Alive',
+            artists: ['Alok'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+        {        
+            name: 'Pirate',
+            artists: ['Liu','GenX'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+        {        
+            name: 'Chlorine',
+            artists: ['Twenty one pilots'],
+            photo: 'Alok.jpg',
+            file_name: 'Alok-Alive.mp3',
+        },
+    ]
+
     function handleFavorite(){
         setIsFavorite(!isFavorite)
     }
-    
+
   return (
     <div id="now-playing-bar">
         <div className="now-playing">
             <div className="music-info">
-                <img src="https://studiosol-a.akamaihd.net/tb/letras-blog/wp-content/uploads/2019/10/8331bc6-2916dae0a5961a23705b3ad905e1b247189fd116-1024x608.jpg" alt=""/>
+                <img src={Alok} alt=""/>
                 <div className="music-info-box">
-                    <Link to={`/albums/${'teste'}`} className="music-text">Waiting for the end</Link>
-                    <Link to={`/artists/${'teste'}`} className="music-text">Linkin park</Link>
+                    <Link to={`/albums/${'teste'}`} className="music-text">{musics[3].name}</Link>
+                    <Link to={`/artists/${'teste'}`} className="music-text">{musics[3].artists}</Link>
                 </div>
                 <button onClick={handleFavorite}>
                     {isFavorite ? 
@@ -30,12 +73,8 @@ function PlayerAudio() {
                     </button>
             </div>
         </div>
-        <div className="player-control">
+        <PlayerControl musicsQueue={musics}/>
 
-        </div>
-        <div className="other-controls">
-
-        </div>
     </div>
   );
 }
